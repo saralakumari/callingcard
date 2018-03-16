@@ -1,0 +1,135 @@
+/* https://en.wikipedia.org/wiki/Web_colors */
+
+/* GENERAL HIGH-LEVEL PAGE SETTINGS */
+html {
+	margin: 0;
+	padding: 0;
+	background-color: SteelBlue;
+	background-repeat: repeat;
+	background-image: url(../images/bkgd.png);
+	text-align:left;
+	font-size: 17px;
+}
+body {
+	margin: 0 auto;
+	padding: 0.5rem 1rem;
+	width: 90%;
+	max-width: 30cm;
+	background-color: Ivory;
+	color: DarkSlateGray;
+	font-family: "libertine";
+}
+
+/* FONT FILES */
+@font-face { font-family: 'biolinum'; src: url('../fonts/LinBiolinum_R.woff') format('woff'); }
+@font-face { font-family: 'biolinum'; src: url('../fonts/LinBiolinum_RI.woff') format('woff'); font-style: italic; }
+@font-face { font-family: 'biolinum'; src: url('../fonts/LinBiolinum_RB.woff') format('woff'); font-weight: bold; }
+@font-face { font-family: 'libertine'; src: url('../fonts/LinLibertine_R.woff') format('woff'); }
+@font-face { font-family: 'libertine'; src: url('../fonts/LinLibertine_RI.woff') format('woff'); font-style: italic; }
+@font-face { font-family: 'libertine'; src: url('../fonts/LinLibertine_RB.woff') format('woff'); font-weight: bold; }
+@font-face { font-family: 'libertine'; src: url('../fonts/LinLibertine_RBI.woff') format('woff'); font-weight: bold; font-style: italic; }
+
+
+/* LINK STYLING */
+a, a:visited { 
+	color: Crimson;
+	text-decoration: none; 
+}
+a:hover, a:active { 
+	color: Goldenrod;
+	text-decoration: underline;
+}
+
+/* FANCY HORIZONTAL LINES */
+hr { 
+	border: 0;
+	height: 1px;
+	margin: 0.4rem 0rem 0.4rem 0rem;  /* top right bottom left */
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+/* SPACING */
+p {
+	margin: 0;
+	padding: 0 0 0.5rem 0;  /* top right bottom left */
+}
+ul {
+	margin: 0;
+	padding: 0 0 0.5rem 1rem;  /* top right bottom left */
+}
+/* HEADING SPACING & COLOR */
+h1, h2, h3, h4, h5, h6 { 
+	margin: 0;
+	padding: 0.2rem 0;  /* top+bottom right+left */
+	color: MidnightBlue; 
+}
+h1, h2 { padding-top: 0.5rem; }  /* later rules override earlier ones */
+h4, h5, h6 { margin-right: 0.5rem; }
+
+/* MAIN TITLE */
+div#title {
+	margin: 0;
+	padding: 0;
+	display: block;
+	font: bold 3.0rem "libertine";
+	text-transform: none;
+	color: MidnightBlue;
+}
+
+/* SUBTITLE */
+div#subtitle {
+	margin: 0;
+	padding: 0;
+	display: block;
+	font: bold 1.6rem "libertine";
+	text-transform: none;
+	color: MidnightBlue;
+}
+
+/* HEADING FONT STYLES */
+h1 { font: bold 1.5rem "libertine"; }  /* section headings */
+h2 { font: bold 1.2rem "libertine"; }  /* subsection headings */
+h3 { font: bold 1.0rem "libertine"; }  /* subsubsection headings */
+h4, h5, h6 {  /* inline headings */
+	font: normal 1.0rem "libertine"; 
+	font-style: italic; 
+	display: inline-block; 
+	margin-right: 1rem;
+}
+
+/* NAVIGATION STYLES */
+div#navigation a {
+	text-transform: uppercase;
+	margin: 0.7rem 1rem 0.7rem 0;  /* top right bottom left */
+	padding: 0;
+	font-size: 0.8rem;
+}
+div#navigation a:hover, div#navigation a:active {
+	text-decoration: none;
+}
+
+/* HEADSHOT */
+div#headshot {
+	float: right;
+	width: 10rem;
+	margin-left: 2rem;
+}
+div#headshot img {
+	border: none;
+	width: inherit;
+}
+
+/* PHONE-FRIENDLY */
+@media (max-width: 11cm) {
+	html { background-image: none; font-size: 13px; }
+	html, body { width: 96%; min-width: 96%; max-width: 96%; }
+	body { margin: 0 2%; }
+	h1 { font-size: 1.2rem; }
+	h2 { font-size: 1.1rem; }
+	h3 { font-size: 1.0rem; }
+	div#headshot { display: none; }
+}
+
+@media (max-width: 7cm) {
+	html { font-size: 11px; }
+}
